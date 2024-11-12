@@ -8,20 +8,27 @@
         body {
             display: flex;
             justify-content: space-between;
-            margin: 20px;
+            font-family: Arial, sans-serif;
         }
         .form-container {
-            width: 60%;
+            width: 50%;
         }
         .instructions {
-            width: 35%;
-            padding: 20px;
-            background-color: #f4f4f4;
-            border-radius: 8px;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            width: 25%;
         }
-        .instructions h2 {
-            margin-top: 0;
+        .help-section {
+            width: 25%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .help-section a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .help-section a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -92,6 +99,14 @@
         </ul>
     {% endif %}
 </div>
+
+<div class="help-section">
+    <h2>For more help</h2>
+    <p>
+        Visit this link: <a href="https://www.example.com/help" target="_blank">More Help</a>
+    </p>
+</div>
+
 <div class="instructions">
     <h2>Instructions</h2>
     <p>Please fill out the form with the necessary information:</p>
