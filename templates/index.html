@@ -8,27 +8,20 @@
         body {
             display: flex;
             justify-content: space-between;
-            font-family: Arial, sans-serif;
+            margin: 20px;
         }
         .form-container {
-            width: 50%;
+            width: 60%;
         }
         .instructions {
-            width: 25%;
+            width: 35%;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
         }
-        .help-section {
-            width: 25%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-        .help-section a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-        .help-section a:hover {
-            text-decoration: underline;
+        .instructions h2 {
+            margin-top: 0;
         }
     </style>
 </head>
@@ -99,14 +92,6 @@
         </ul>
     {% endif %}
 </div>
-
-<div class="help-section">
-    <h2>For more help</h2>
-    <p>
-        Visit this link: <a href="https://www.example.com/help" target="_blank">More Help</a>
-    </p>
-</div>
-
 <div class="instructions">
     <h2>Instructions</h2>
     <p>Please fill out the form with the necessary information:</p>
@@ -118,7 +103,7 @@
         <li><strong>Van Clusters:</strong> Specify how many clusters of vans you need.</li>
         <li><strong>List of Bus Capacities:</strong> Provide a comma-separated list of bus capacities.</li>
     </ul>
-    <p>Once submitted, the form will compute the optimal clustering without using location data. Use this original output as a baseline and submit again after placing at least the required number of crews in the buses using your site map. Consult your map and if need be, place additional crews on the buses and submit again until you are satisfied. Don't forget to subtract out the crews you place on the buses from their respective site sizes and the bus capacities before you submit again.</p>
+    <p>Once submitted, the form will compute the optimal clustering without using location data. Use this original output as a baseline and submit again after placing at least the required number of crews in the buses using your site map. Consult your map and if need be, place additional crews on the buses and submit again until you are satisfied. Don't forget to subtract out the crews you place on the buses from their respective site sizes and the bus capacities before you submit again. For more help, visit this link: <a href="https://www.google.com" target="_blank"></a></p>
 </div>
 
 </body>
