@@ -18,15 +18,14 @@
             align-items: stretch;
         }
 
-        /* Form container will be flexible */
-        .form-container {
-            flex-grow: 1;
-            margin-right: 30px;
+        /* Make both columns equal width */
+        .form-container, .instructions {
+            width: 48%;  /* Both sections will have equal width */
+            display: flex;
+            flex-direction: column;
         }
 
-        /* Instructions will have a fixed width */
         .instructions {
-            width: 300px; /* Set a fixed width */
             padding: 20px;
             background-color: #f4f4f4;
             border-radius: 8px;
@@ -64,12 +63,13 @@
             background-color: #45a049;
         }
 
+        /* Responsive layout for smaller screens */
         @media (max-width: 600px) {
             .container {
                 flex-direction: column;
             }
-            .instructions {
-                width: 100%; /* Make instructions take full width on small screens */
+            .form-container, .instructions {
+                width: 100%; /* Both columns take up full width on small screens */
             }
         }
     </style>
