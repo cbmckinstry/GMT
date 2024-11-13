@@ -66,13 +66,21 @@
             .container {
                 flex-direction: row;
                 justify-content: space-between;
-                align-items: stretch;
+                align-items: flex-start;
             }
-            .form-container{
-                flex: auto;
+            .form-container {
+                width: 48%;
             }
-            .instructions{
-                flex: auto;
+            .instructions {
+                width: 48%;
+            }
+        }
+        @media (max-width: 599px) {
+            .instructions {
+                width: 100%;
+            }
+            .form-container {
+                width: 100%;
             }
         }
     </style>
