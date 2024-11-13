@@ -9,41 +9,26 @@
             display: flex;
             flex-direction: column;
             margin: 20px;
-            gap: 30px;
+            gap: 20px;
         }
-
-        .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: stretch;
-        }
-        /* Make both columns equal width */
-        .instructions {
+        .form-container, .instructions {
+            width: 60%;
             margin-right: 30px;
-            width: 45%;  /* Both sections will have equal width */
-            display: flex;
-            flex-direction: column;
         }
-
         .instructions {
-            width: 45%;
-            display: flex;
-            flex-direction: column;
-            padding: 30px;
+            width: 35%;
+            padding: 20px;
             background-color: #f4f4f4;
             border-radius: 8px;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
         }
-
         .instructions h2 {
             margin-top: 0;
         }
-
         form label {
             display: block;
             margin-bottom: 5px;
         }
-
         form input {
             width: 100%;
             padding: 8px;
@@ -51,7 +36,6 @@
             border-radius: 4px;
             border: 1px solid #ccc;
         }
-
         form input[type="submit"] {
             width: auto;
             padding: 10px 20px;
@@ -61,18 +45,27 @@
             border-radius: 4px;
             cursor: pointer;
         }
-
         form input[type="submit"]:hover {
             background-color: #45a049;
         }
 
-        /* Responsive layout for smaller screens */
-        @media (max-width: 600px) {
+        /* Make both columns stretch to the same height */
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 600px) {
             .container {
-                flex-direction: column;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: stretch;
             }
             .form-container, .instructions {
-                width: 100%; /* Both columns take up full width on small screens */
+                width: 48%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
             }
         }
     </style>
