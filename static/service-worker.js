@@ -1,6 +1,6 @@
 const CACHE_NAME = 'clustering-app-v1';
 const urlsToCache = [
-    '/',                      // Root route (your HTML)
+    '/templates/index.html',                      // Root route (your HTML)
     '/static/service-worker.js' // Cache the service worker itself
 ];
 
