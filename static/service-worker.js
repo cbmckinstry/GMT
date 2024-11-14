@@ -1,9 +1,7 @@
 const CACHE_NAME = 'clustering-app-v1';
 const urlsToCache = [
-    '/',
-    '/static/css/styles.css', // Your CSS files
-    '/static/js/script.js',    // Any JavaScript files
-    '/static/images/logo.png', // Any images you want to cache
+    '/',                      // Root route (your HTML)
+    '/static/service-worker.js' // Cache the service worker itself
 ];
 
 self.addEventListener('install', event => {
@@ -17,6 +15,7 @@ self.addEventListener('install', event => {
 self.addEventListener('fetch', event => {
     event.respondWith(
         caches.match(event.request).then(response => {
+            // Return the cached response if found, otherwise fetch from the network
             return response || fetch(event.request);
         })
     );
